@@ -40,7 +40,7 @@ public class fastJsonConfig extends WebMvcConfigurationSupport {
     converter.setDefaultCharset(Charset.forName("UTF-8"));
     List<MediaType> mediaTypeList = new ArrayList<>();
     // 解决中文乱码问题，相当于在 Controller 上的 @RequestMapping 中加了个属性 produces = "application/json"
-    mediaTypeList.add(MediaType.APPLICATION_JSON);
+    mediaTypeList.add(MediaType.APPLICATION_JSON_UTF8);
     converter.setSupportedMediaTypes(mediaTypeList);
     converters.add(converter);
   }

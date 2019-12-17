@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class ServerAspect {
   private final Logger logger = LoggerFactory.getLogger(ServerAspect.class);
 
-  @Around("execution(public * com.fotile.hrmanagement.controller..*.*(..))")
+  @Around("execution(public * com.sunny.ifms.controller..*.*(..))")
   public Object controllerLog(ProceedingJoinPoint pdj) throws Throwable {
 
 

@@ -7,4 +7,12 @@ import javax.persistence.Table;
 public class Book {
   @Id
   private Integer id;
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 }

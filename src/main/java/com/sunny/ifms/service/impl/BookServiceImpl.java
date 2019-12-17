@@ -14,6 +14,10 @@ public class BookServiceImpl implements BookService {
 private BookDao bookDao;
   @Override
   public List<Book> getList() {
+    Book book=new Book();
+    bookDao.insertSelective(book);
+    bookDao.updateByPrimaryKey(book);
+    bookDao.deleteByPrimaryKey(book);
     return bookDao.selectAll();
   }
 }

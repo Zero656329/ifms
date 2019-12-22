@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
   @Override
   public List<User> getList() {
     List<User> users=userDao.selectAll();
+
     redisTemplate.opsForValue().set("user",users);
     return users;
   }
